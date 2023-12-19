@@ -16,6 +16,7 @@
 		4589EFB52B32383800D9FE4D /* CloudsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4589EFB42B32383800D9FE4D /* CloudsView.swift */; };
 		4589EFB82B32468E00D9FE4D /* Color-Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4589EFB72B32468E00D9FE4D /* Color-Custom.swift */; };
 		4589EFBB2B32486500D9FE4D /* Array-GradientStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4589EFBA2B32486500D9FE4D /* Array-GradientStop.swift */; };
+		4589EFBD2B324B8000D9FE4D /* Color-Interpolation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4589EFBC2B324B8000D9FE4D /* Color-Interpolation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		4589EFB42B32383800D9FE4D /* CloudsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudsView.swift; sourceTree = "<group>"; };
 		4589EFB72B32468E00D9FE4D /* Color-Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Custom.swift"; sourceTree = "<group>"; };
 		4589EFBA2B32486500D9FE4D /* Array-GradientStop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array-GradientStop.swift"; sourceTree = "<group>"; };
+		4589EFBC2B324B8000D9FE4D /* Color-Interpolation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Interpolation.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				4589EFB72B32468E00D9FE4D /* Color-Custom.swift */,
+				4589EFBC2B324B8000D9FE4D /* Color-Interpolation.swift */,
 				4589EFBA2B32486500D9FE4D /* Array-GradientStop.swift */,
 			);
 			path = Extensions;
@@ -168,6 +171,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4589EFBD2B324B8000D9FE4D /* Color-Interpolation.swift in Sources */,
 				4589EFA52B322E3000D9FE4D /* ContentView.swift in Sources */,
 				4589EFB12B32304200D9FE4D /* Cloud.swift in Sources */,
 				4589EFB82B32468E00D9FE4D /* Color-Custom.swift in Sources */,
