@@ -10,11 +10,12 @@ import Foundation
 class CloudGroup {
     var clouds = [Cloud]()
     let opacity: Double
+    var lastUpdate = Date.now
     
     init(thickness: Cloud.Thickness) {
         let cloudsToCreate: Int
         let cloudScale: ClosedRange<Double>
-    
+        
         switch thickness {
         case .none:
             cloudsToCreate = 0
@@ -53,5 +54,20 @@ class CloudGroup {
             let cloud = Cloud(imageNumber: imageNumber, scale: scale)
             clouds.append(cloud)
         }
+    }
+    
+    func update(date: Date) {
+        let delta = date.timeIntervalSince1970 - lastUpdate.timeIntervalSince1970
+        for cloud in clouds {
+            cloud.position.x -= delta * cloud.speed
+            
+            // resetting location of clouds, when left the screen
+            let offScreenDistance = max(400, 400 * cloud.scale)
+            
+            if cloud.position.x < -offScreenDistance {
+                cloud.position.x = offScreenDistance
+            }
+        }
+        lastUpdate = date
     }
 }

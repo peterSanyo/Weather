@@ -13,6 +13,7 @@
 		4589EFAA2B322E3800D9FE4D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4589EFA92B322E3800D9FE4D /* Preview Assets.xcassets */; };
 		4589EFB12B32304200D9FE4D /* Cloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4589EFB02B32304200D9FE4D /* Cloud.swift */; };
 		4589EFB32B32317100D9FE4D /* CloudGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4589EFB22B32317100D9FE4D /* CloudGroup.swift */; };
+		4589EFB52B32383800D9FE4D /* CloudsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4589EFB42B32383800D9FE4D /* CloudsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		4589EFA92B322E3800D9FE4D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4589EFB02B32304200D9FE4D /* Cloud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cloud.swift; sourceTree = "<group>"; };
 		4589EFB22B32317100D9FE4D /* CloudGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudGroup.swift; sourceTree = "<group>"; };
+		4589EFB42B32383800D9FE4D /* CloudsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				4589EFA22B322E3000D9FE4D /* WeatherApp.swift */,
 				4589EFA42B322E3000D9FE4D /* ContentView.swift */,
 				4589EFB02B32304200D9FE4D /* Cloud.swift */,
+				4589EFB42B32383800D9FE4D /* CloudsView.swift */,
 				4589EFB22B32317100D9FE4D /* CloudGroup.swift */,
 				4589EFA62B322E3800D9FE4D /* Assets.xcassets */,
 				4589EFA82B322E3800D9FE4D /* Preview Content */,
@@ -147,6 +150,7 @@
 				4589EFB12B32304200D9FE4D /* Cloud.swift in Sources */,
 				4589EFA32B322E3000D9FE4D /* WeatherApp.swift in Sources */,
 				4589EFB32B32317100D9FE4D /* CloudGroup.swift in Sources */,
+				4589EFB52B32383800D9FE4D /* CloudsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
