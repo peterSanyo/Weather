@@ -8,6 +8,7 @@
 import SwiftUI
 
 extension Color {
+    /// Sky Colors
     static let midnightStart = Color(hue: 0.66, saturation: 0.8, brightness: 0.1)
     static let midnightEnd = Color(hue: 0.62, saturation: 0.5, brightness: 0.33)
     
@@ -19,4 +20,18 @@ extension Color {
     
     static let sunsetStart = Color.sunriseStart
     static let sunsetEnd = Color(hue: 0.05, saturation: 0.34, brightness: 0.65)
+    
+    
+    /// Cloud Colors
+    static let darkCloudStart = Color(hue: 0.65, saturation: 0.3, brightness: 0.3)
+    static let darkCloudEnd = Color(hue: 0.65, saturation: 0.3, brightness: 0.7)
+    
+    static let lightCloudStart = Color.white
+    static let lightCloudEnd = Color(white: 0.75)
+    
+    static let sunriseCloudStart = Color.lightCloudStart
+    static let sunriseCloudEnd = Color.sunriseEnd
+    
+    static let sunsetCloudStart = Color.lightCloudStart
+    static let sunsetCloudEnd = Color.sunsetEnd
 }
