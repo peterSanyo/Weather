@@ -17,6 +17,9 @@
 		4589EFB82B32468E00D9FE4D /* Color-Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4589EFB72B32468E00D9FE4D /* Color-Custom.swift */; };
 		4589EFBB2B32486500D9FE4D /* Array-GradientStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4589EFBA2B32486500D9FE4D /* Array-GradientStop.swift */; };
 		4589EFBD2B324B8000D9FE4D /* Color-Interpolation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4589EFBC2B324B8000D9FE4D /* Color-Interpolation.swift */; };
+		4589EFC02B325A5A00D9FE4D /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4589EFBF2B325A5A00D9FE4D /* Star.swift */; };
+		4589EFC22B325A6100D9FE4D /* StarField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4589EFC12B325A6100D9FE4D /* StarField.swift */; };
+		4589EFC42B325A6E00D9FE4D /* StarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4589EFC32B325A6E00D9FE4D /* StarsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,9 @@
 		4589EFB72B32468E00D9FE4D /* Color-Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Custom.swift"; sourceTree = "<group>"; };
 		4589EFBA2B32486500D9FE4D /* Array-GradientStop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array-GradientStop.swift"; sourceTree = "<group>"; };
 		4589EFBC2B324B8000D9FE4D /* Color-Interpolation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Interpolation.swift"; sourceTree = "<group>"; };
+		4589EFBF2B325A5A00D9FE4D /* Star.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Star.swift; sourceTree = "<group>"; };
+		4589EFC12B325A6100D9FE4D /* StarField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarField.swift; sourceTree = "<group>"; };
+		4589EFC32B325A6E00D9FE4D /* StarsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +71,7 @@
 			children = (
 				4589EFA22B322E3000D9FE4D /* WeatherApp.swift */,
 				4589EFA42B322E3000D9FE4D /* ContentView.swift */,
+				4589EFBE2B325A4500D9FE4D /* StarsView */,
 				4589EFB62B32463300D9FE4D /* CloudsView */,
 				4589EFB92B3247AD00D9FE4D /* Extensions */,
 				4589EFA62B322E3800D9FE4D /* Assets.xcassets */,
@@ -99,6 +106,16 @@
 				4589EFBA2B32486500D9FE4D /* Array-GradientStop.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4589EFBE2B325A4500D9FE4D /* StarsView */ = {
+			isa = PBXGroup;
+			children = (
+				4589EFC32B325A6E00D9FE4D /* StarsView.swift */,
+				4589EFC12B325A6100D9FE4D /* StarField.swift */,
+				4589EFBF2B325A5A00D9FE4D /* Star.swift */,
+			);
+			path = StarsView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,13 +188,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4589EFC02B325A5A00D9FE4D /* Star.swift in Sources */,
 				4589EFBD2B324B8000D9FE4D /* Color-Interpolation.swift in Sources */,
 				4589EFA52B322E3000D9FE4D /* ContentView.swift in Sources */,
 				4589EFB12B32304200D9FE4D /* Cloud.swift in Sources */,
 				4589EFB82B32468E00D9FE4D /* Color-Custom.swift in Sources */,
 				4589EFA32B322E3000D9FE4D /* WeatherApp.swift in Sources */,
+				4589EFC22B325A6100D9FE4D /* StarField.swift in Sources */,
 				4589EFBB2B32486500D9FE4D /* Array-GradientStop.swift in Sources */,
 				4589EFB32B32317100D9FE4D /* CloudGroup.swift in Sources */,
+				4589EFC42B325A6E00D9FE4D /* StarsView.swift in Sources */,
 				4589EFB52B32383800D9FE4D /* CloudsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
