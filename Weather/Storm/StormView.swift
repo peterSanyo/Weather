@@ -36,6 +36,8 @@ struct StormView: View {
     }
 }
 
-//#Preview {
-//    StormView()
-//}
+#Preview {
+    StormView(type: .rain, direction: .zero, strength: 200)
+        .background(.black)
+
+}

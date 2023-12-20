@@ -88,42 +88,53 @@ struct ContentView: View {
         }
         .preferredColorScheme(.dark)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(
-            LinearGradient( colors: [
-                backgroundTopStops.interpolated(amount: time),
-                backgroundBottomStops.interpolated(amount: time)
-            ], startPoint: .top, endPoint: .bottom)
-        )
-        
-        // Debug Interface
+        .background(skyGradient)
         .safeAreaInset(edge: .bottom) {
-            VStack {
-                
-                
-                Picker("Thickness", selection: $cloudThickness) {
-                    ForEach(Cloud.Thickness.allCases, id: \.self) { thickness in
-                        Text(String(describing: thickness).capitalized)
-                    }
-                }
-                .pickerStyle(.segmented)
-                
-                HStack {
-                    Text("Time:\(formattedTime)")
-                    Slider(value: $time)
-                }
-                .padding(.bottom)
-                
-                stormInterface
-                
-                
-            }
-            .padding(5)
-            .frame(maxWidth: .infinity)
-            .background(.regularMaterial)
+            debugInterface
         }
     }
     
-    var stormInterface: some View {
+    // MARK: - Sky Gradient
+    
+    var skyGradient: some View {
+        LinearGradient( colors: [
+            backgroundTopStops.interpolated(amount: time),
+            backgroundBottomStops.interpolated(amount: time)
+        ], startPoint: .top, endPoint: .bottom)
+    }
+    
+    
+    
+    // MARK: - Debug Interface
+    
+    var debugInterface: some View {
+        VStack(spacing: 15) {
+            cloudDebugUi
+            timeDebugUI
+            stormDebugUI
+        }
+        .padding(.horizontal, 10)
+        .frame(maxWidth: .infinity)
+        .background(.regularMaterial)
+    }
+    
+    var cloudDebugUi: some View {
+        Picker("Thickness", selection: $cloudThickness) {
+            ForEach(Cloud.Thickness.allCases, id: \.self) { thickness in
+                Text(String(describing: thickness).capitalized)
+            }
+        }
+        .pickerStyle(.segmented)
+    }
+    
+    var timeDebugUI: some View {
+        HStack {
+            Text("Time: \(formattedTime) ")
+            Slider(value: $time)
+        }
+    }
+    
+    var stormDebugUI: some View {
         Group {
             Picker("Precipitation", selection: $stormType) {
                 ForEach(Storm.Contents.allCases, id: \.self) { stormType in
@@ -136,11 +147,10 @@ struct ContentView: View {
                 Text("Intensity:")
                 Slider(value: $rainIntensity, in: 0...1000)
             }
-            .padding(.horizontal)
             
             HStack {
                 Text("Angle:")
-                Slider(value:$rainAngle)
+                Slider(value: $rainAngle, in: 0...90)
             }
         }
     }
