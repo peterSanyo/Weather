@@ -11,6 +11,10 @@ struct ContentView: View {
     @State private var cloudThickness = Cloud.Thickness.regular
     @State private var time = 0.0
     
+    @State private var stormType = Storm.Contents.none
+    @State private var rainIntensity = 500.0
+    @State private var rainAngle = 0.0
+    
     let backgroundTopStops: [Gradient.Stop] = [
         .init(color: .midnightStart, location: 0),
         .init(color: .midnightStart, location: 0.25),
@@ -31,7 +35,6 @@ struct ContentView: View {
         .init(color: .midnightEnd, location: 0.82),
         .init(color: .midnightEnd, location: 1)
     ]
-    
     let cloudTopStops: [Gradient.Stop] = [
         .init(color: .darkCloudStart, location: 0),
         .init(color: .darkCloudStart, location: 0.25),
@@ -42,7 +45,6 @@ struct ContentView: View {
         .init(color: .darkCloudStart, location: 0.82),
         .init(color: .darkCloudStart, location: 1)
     ]
-
     let cloudBottomStops: [Gradient.Stop] = [
         .init(color: .darkCloudEnd, location: 0),
         .init(color: .darkCloudEnd, location: 0.25),
@@ -53,7 +55,6 @@ struct ContentView: View {
         .init(color: .darkCloudEnd, location: 0.82),
         .init(color: .darkCloudEnd, location: 1)
     ]
-    
     let starStops: [Gradient.Stop] = [
         .init(color: .white, location: 0),
         .init(color: .white, location: 0.25),
@@ -72,16 +73,21 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
-            StarsView()
-                .opacity(starOpacity)
+            //            StarsView()
+            //                .opacity(starOpacity)
+            //
+            //            CloudsView(
+            //                thickness: cloudThickness,
+            //                topTint: cloudTopStops.interpolated(amount: time),
+            //                bottomTint: cloudBottomStops.interpolated(amount:time)
+//        )
+            if stormType != .none {
+                StormView(type: stormType, direction: .degrees(rainAngle), strength: Int(rainIntensity))
+            }
             
-            CloudsView(
-                thickness: cloudThickness,
-                topTint: cloudTopStops.interpolated(amount: time),
-                bottomTint: cloudBottomStops.interpolated(amount:time)
-            )
         }
         .preferredColorScheme(.dark)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(
             LinearGradient( colors: [
                 backgroundTopStops.interpolated(amount: time),
@@ -92,8 +98,7 @@ struct ContentView: View {
         // Debug Interface
         .safeAreaInset(edge: .bottom) {
             VStack {
-                Text(formattedTime)
-                    .padding(.top)
+                
                 
                 Picker("Thickness", selection: $cloudThickness) {
                     ForEach(Cloud.Thickness.allCases, id: \.self) { thickness in
@@ -103,16 +108,43 @@ struct ContentView: View {
                 .pickerStyle(.segmented)
                 
                 HStack {
-                    Text("Time:")
+                    Text("Time:\(formattedTime)")
                     Slider(value: $time)
                 }
-                .padding()
+                .padding(.bottom)
+                
+                stormInterface
+                
+                
             }
             .padding(5)
             .frame(maxWidth: .infinity)
             .background(.regularMaterial)
         }
     }
+    
+    var stormInterface: some View {
+        Group {
+            Picker("Precipitation", selection: $stormType) {
+                ForEach(Storm.Contents.allCases, id: \.self) { stormType in
+                    Text(String(describing: stormType).capitalized)
+                }
+            }
+            .pickerStyle(.segmented)
+            
+            HStack {
+                Text("Intensity:")
+                Slider(value: $rainIntensity, in: 0...1000)
+            }
+            .padding(.horizontal)
+            
+            HStack {
+                Text("Angle:")
+                Slider(value:$rainAngle)
+            }
+        }
+    }
+    
     var formattedTime: String {
         let start = Calendar.current.startOfDay(for: Date.now)
         let advanced = start.addingTimeInterval(time * 24 * 60 * 60)
@@ -123,3 +155,4 @@ struct ContentView: View {
 #Preview {
     ContentView()
 }
+

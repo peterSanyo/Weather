@@ -22,6 +22,7 @@
 		4589EFC42B325A6E00D9FE4D /* StarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4589EFC32B325A6E00D9FE4D /* StarsView.swift */; };
 		4589EFC72B32EF5A00D9FE4D /* Storm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4589EFC62B32EF5A00D9FE4D /* Storm.swift */; };
 		4589EFC92B32EFAD00D9FE4D /* StormDrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4589EFC82B32EFAD00D9FE4D /* StormDrop.swift */; };
+		4589EFCB2B32F38C00D9FE4D /* StormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4589EFCA2B32F38C00D9FE4D /* StormView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		4589EFC32B325A6E00D9FE4D /* StarsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsView.swift; sourceTree = "<group>"; };
 		4589EFC62B32EF5A00D9FE4D /* Storm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storm.swift; sourceTree = "<group>"; };
 		4589EFC82B32EFAD00D9FE4D /* StormDrop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StormDrop.swift; sourceTree = "<group>"; };
+		4589EFCA2B32F38C00D9FE4D /* StormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StormView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 		4589EFC52B32EF4A00D9FE4D /* Storm */ = {
 			isa = PBXGroup;
 			children = (
+				4589EFCA2B32F38C00D9FE4D /* StormView.swift */,
 				4589EFC82B32EFAD00D9FE4D /* StormDrop.swift */,
 				4589EFC62B32EF5A00D9FE4D /* Storm.swift */,
 			);
@@ -208,6 +211,7 @@
 				4589EFA52B322E3000D9FE4D /* ContentView.swift in Sources */,
 				4589EFC72B32EF5A00D9FE4D /* Storm.swift in Sources */,
 				4589EFB12B32304200D9FE4D /* Cloud.swift in Sources */,
+				4589EFCB2B32F38C00D9FE4D /* StormView.swift in Sources */,
 				4589EFB82B32468E00D9FE4D /* Color-Custom.swift in Sources */,
 				4589EFA32B322E3000D9FE4D /* WeatherApp.swift in Sources */,
 				4589EFC22B325A6100D9FE4D /* StarField.swift in Sources */,
