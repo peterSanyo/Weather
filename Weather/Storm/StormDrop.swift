@@ -34,7 +34,7 @@ class StormDrop {
         case .snow:
             xScale = Double.random(in: 0.125...1)
             yScale = xScale * Double.random(in: 0.5...1)
-            speed = Double.random(in: 0.2...0.6)
+            speed = Double.random(in: 0.1...0.3)
             opacity = Double.random(in: 0.2...1)
             rotation = Angle.degrees(Double.random(in: 0...360))
             rotationSpeed = Angle.degrees(Double.random(in: -360...360))

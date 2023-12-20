@@ -73,14 +73,14 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
-            //            StarsView()
-            //                .opacity(starOpacity)
-            //
-            //            CloudsView(
-            //                thickness: cloudThickness,
-            //                topTint: cloudTopStops.interpolated(amount: time),
-            //                bottomTint: cloudBottomStops.interpolated(amount:time)
-//        )
+                        StarsView()
+                            .opacity(starOpacity)
+            
+                        CloudsView(
+                            thickness: cloudThickness,
+                            topTint: cloudTopStops.interpolated(amount: time),
+                            bottomTint: cloudBottomStops.interpolated(amount:time)
+        )
             if stormType != .none {
                 StormView(type: stormType, direction: .degrees(rainAngle), strength: Int(rainIntensity))
             }
@@ -89,6 +89,7 @@ struct ContentView: View {
         .preferredColorScheme(.dark)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(skyGradient)
+        .ignoresSafeArea()
         .safeAreaInset(edge: .bottom) {
             debugInterface
         }
@@ -115,7 +116,7 @@ struct ContentView: View {
         }
         .padding(.horizontal, 10)
         .frame(maxWidth: .infinity)
-        .background(.regularMaterial)
+        .background(Material.ultraThin)
     }
     
     var cloudDebugUi: some View {
