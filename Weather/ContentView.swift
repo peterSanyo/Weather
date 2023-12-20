@@ -75,11 +75,11 @@ struct ContentView: View {
             StarsView()
                 .opacity(starOpacity)
             
-//            CloudsView(
-//                thickness: cloudThickness,
-//                topTint: cloudTopStops.interpolated(amount: time),
-//                bottomTint: cloudBottomStops.interpolated(amount:time)
-//            )
+            CloudsView(
+                thickness: cloudThickness,
+                topTint: cloudTopStops.interpolated(amount: time),
+                bottomTint: cloudBottomStops.interpolated(amount:time)
+            )
         }
         .preferredColorScheme(.dark)
         .background(
