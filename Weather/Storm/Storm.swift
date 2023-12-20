@@ -33,13 +33,16 @@ class Storm {
         // ensuring movement is smooth over time regardless of frame Rate
         let delta = date.timeIntervalSince1970 - lastUpdate.timeIntervalSince1970
         
+        // continous speed, no matter the angle
+        let divisor = size.height / size.width
+        
         for drop in drops {
             
             let radians = drop.direction.radians // making it possible to trigonometrical calculate new position based on direction (Angle -> radians)
             
             // Update the x position of the drop based on its speed, direction, and time delta.
-            drop.x += cos(radians) * drop.speed * delta // cos(radians) gives the horizontal component of the direction.
-            drop.y += sin(radians) * drop.speed * delta // sin(radians) for the vertical component.
+            drop.x += cos(radians) * drop.speed * delta * divisor // cos(radians) gives the horizontal component of the direction.
+            drop.y += sin(radians) * drop.speed * delta * divisor // sin(radians) for the vertical component.
 
             // Horizontal wrapping
             if drop.x < -0.2 {
