@@ -165,8 +165,8 @@
 		4589EFD52B3438BA00D9FE4D /* Lightning */ = {
 			isa = PBXGroup;
 			children = (
-				4589EFD62B3438D100D9FE4D /* Lightning.swift */,
 				4589EFDA2B343AB200D9FE4D /* LightningView.swift */,
+				4589EFD62B3438D100D9FE4D /* Lightning.swift */,
 				4589EFD82B34390500D9FE4D /* LightningBolt.swift */,
 			);
 			path = Lightning;
