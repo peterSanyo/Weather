@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-class ResidueDrop {
+class ResidueDrop: Hashable {
+    var id = UUID()
     var destructionTime: Double
     var x: Double
     var y = 0.5
@@ -41,5 +42,13 @@ class ResidueDrop {
             xMovement = cos(direction)
             yMovement = sin(direction) / 1.5
         }
+    }
+    
+    static func ==(lhs: ResidueDrop, rhs: ResidueDrop) -> Bool {
+        lhs.id == rhs.id
+    }
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
     }
 }
