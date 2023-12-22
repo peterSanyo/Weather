@@ -31,6 +31,7 @@
 		4589EFD92B34390500D9FE4D /* LightningBolt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4589EFD82B34390500D9FE4D /* LightningBolt.swift */; };
 		4589EFDB2B343AB200D9FE4D /* LightningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4589EFDA2B343AB200D9FE4D /* LightningView.swift */; };
 		4589EFDE2B35A4F800D9FE4D /* SunView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4589EFDD2B35A4F800D9FE4D /* SunView.swift */; };
+		4589EFE12B35CCD700D9FE4D /* Meteor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4589EFE02B35CCD700D9FE4D /* Meteor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		4589EFD82B34390500D9FE4D /* LightningBolt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightningBolt.swift; sourceTree = "<group>"; };
 		4589EFDA2B343AB200D9FE4D /* LightningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightningView.swift; sourceTree = "<group>"; };
 		4589EFDD2B35A4F800D9FE4D /* SunView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunView.swift; sourceTree = "<group>"; };
+		4589EFE02B35CCD700D9FE4D /* Meteor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meteor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				4589EFA22B322E3000D9FE4D /* WeatherApp.swift */,
 				4589EFA42B322E3000D9FE4D /* ContentView.swift */,
 				4589EFD32B34342500D9FE4D /* WeatherDetailsView.swift */,
+				4589EFDF2B35CCC400D9FE4D /* Meteor */,
 				4589EFDC2B35A4DC00D9FE4D /* Sun */,
 				4589EFD52B3438BA00D9FE4D /* Lightning */,
 				4589EFC52B32EF4A00D9FE4D /* Storm */,
@@ -183,6 +186,14 @@
 			path = Sun;
 			sourceTree = "<group>";
 		};
+		4589EFDF2B35CCC400D9FE4D /* Meteor */ = {
+			isa = PBXGroup;
+			children = (
+				4589EFE02B35CCD700D9FE4D /* Meteor.swift */,
+			);
+			path = Meteor;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -264,6 +275,7 @@
 				4589EFCB2B32F38C00D9FE4D /* StormView.swift in Sources */,
 				4589EFDE2B35A4F800D9FE4D /* SunView.swift in Sources */,
 				4589EFD42B34342500D9FE4D /* WeatherDetailsView.swift in Sources */,
+				4589EFE12B35CCD700D9FE4D /* Meteor.swift in Sources */,
 				4589EFB82B32468E00D9FE4D /* Color-Custom.swift in Sources */,
 				4589EFD02B342CCF00D9FE4D /* Residue.swift in Sources */,
 				4589EFD22B34305C00D9FE4D /* ResidueView.swift in Sources */,
