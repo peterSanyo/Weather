@@ -32,6 +32,7 @@
 		4589EFDB2B343AB200D9FE4D /* LightningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4589EFDA2B343AB200D9FE4D /* LightningView.swift */; };
 		4589EFDE2B35A4F800D9FE4D /* SunView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4589EFDD2B35A4F800D9FE4D /* SunView.swift */; };
 		4589EFE12B35CCD700D9FE4D /* Meteor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4589EFE02B35CCD700D9FE4D /* Meteor.swift */; };
+		4589EFE32B35D2EC00D9FE4D /* MeteorShower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4589EFE22B35D2EC00D9FE4D /* MeteorShower.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 		4589EFDA2B343AB200D9FE4D /* LightningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightningView.swift; sourceTree = "<group>"; };
 		4589EFDD2B35A4F800D9FE4D /* SunView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunView.swift; sourceTree = "<group>"; };
 		4589EFE02B35CCD700D9FE4D /* Meteor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meteor.swift; sourceTree = "<group>"; };
+		4589EFE22B35D2EC00D9FE4D /* MeteorShower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeteorShower.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +98,6 @@
 				4589EFA22B322E3000D9FE4D /* WeatherApp.swift */,
 				4589EFA42B322E3000D9FE4D /* ContentView.swift */,
 				4589EFD32B34342500D9FE4D /* WeatherDetailsView.swift */,
-				4589EFDF2B35CCC400D9FE4D /* Meteor */,
 				4589EFDC2B35A4DC00D9FE4D /* Sun */,
 				4589EFD52B3438BA00D9FE4D /* Lightning */,
 				4589EFC52B32EF4A00D9FE4D /* Storm */,
@@ -143,6 +144,7 @@
 				4589EFC32B325A6E00D9FE4D /* StarsView.swift */,
 				4589EFC12B325A6100D9FE4D /* StarField.swift */,
 				4589EFBF2B325A5A00D9FE4D /* Star.swift */,
+				4589EFDF2B35CCC400D9FE4D /* Meteor */,
 				4589EFCC2B342B4700D9FE4D /* Residue */,
 			);
 			path = StarsView;
@@ -189,6 +191,7 @@
 		4589EFDF2B35CCC400D9FE4D /* Meteor */ = {
 			isa = PBXGroup;
 			children = (
+				4589EFE22B35D2EC00D9FE4D /* MeteorShower.swift */,
 				4589EFE02B35CCD700D9FE4D /* Meteor.swift */,
 			);
 			path = Meteor;
@@ -265,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4589EFC92B32EFAD00D9FE4D /* StormDrop.swift in Sources */,
+				4589EFE32B35D2EC00D9FE4D /* MeteorShower.swift in Sources */,
 				4589EFC02B325A5A00D9FE4D /* Star.swift in Sources */,
 				4589EFCE2B342B5900D9FE4D /* ResidueDrop.swift in Sources */,
 				4589EFBD2B324B8000D9FE4D /* Color-Interpolation.swift in Sources */,
