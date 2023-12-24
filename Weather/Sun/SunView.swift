@@ -11,14 +11,13 @@ struct SunView: View {
     @State private var haloScale = 1.0
     @State private var sunRotation = 0.0
     @State private var flareDistance = 80.0
-    
+
     let progress: Double
-    
+
     var sunX: Double {
         (progress - 0.3) * 1.8
     }
 
-    
     var body: some View {
         GeometryReader { geo in
             ZStack {
@@ -26,23 +25,22 @@ struct SunView: View {
                     .blur(radius: 3)
                     .scaleEffect(haloScale)
                     .opacity(sin(progress * .pi) * 3 - 2)
-                
+
                 Image("sun")
                     .blur(radius: 2)
                     .rotationEffect(.degrees(sunRotation))
-                
+
                 VStack {
                     Spacer()
                         .frame(height: 200)
 
-                    ForEach(0..<3) { i in
+                    ForEach(0 ..< 3) { i in
                         Circle()
                             .fill(.white.opacity(0.2))
                             .frame(width: 16 + Double(i * 10), height: 16 + Double(i * 10))
                             .padding(.top, 40 + (sin(Double(i) / 2) * flareDistance))
                             .blur(radius: 2)
                             .opacity(sin(progress * .pi) - 0.7)
-
                     }
                 }
             }

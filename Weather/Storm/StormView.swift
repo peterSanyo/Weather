@@ -13,7 +13,7 @@ struct StormView: View {
         TimelineView(.animation) { timeline in
             Canvas { context, size in
                 storm.update(date: timeline.date, size: size)
-                
+
                 for drop in storm.drops {
                     var contextCopy = context
 
@@ -26,11 +26,11 @@ struct StormView: View {
                     contextCopy.scaleBy(x: drop.xScale, y: drop.yScale)
                     contextCopy.draw(storm.image, at: .zero)
                 }
-                
             }
         }
         .ignoresSafeArea()
     }
+
     init(type: Storm.Contents, direction: Angle, strength: Int) {
         storm = Storm(type: type, direction: direction, strength: strength)
     }
@@ -39,5 +39,4 @@ struct StormView: View {
 #Preview {
     StormView(type: .rain, direction: .zero, strength: 200)
         .background(.black)
-
 }

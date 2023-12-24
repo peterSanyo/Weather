@@ -9,12 +9,12 @@ import SwiftUI
 
 struct LightningView: View {
     var lightning: Lightning
-    
+
     var body: some View {
         TimelineView(.animation) { timeline in
             Canvas { context, size in
                 lightning.update(date: timeline.date, in: size)
-                
+
                 for bolt in lightning.bolts {
                     var path = Path()
                     path.addLines(bolt.points)
@@ -27,6 +27,7 @@ struct LightningView: View {
             lightning.strike()
         }
     }
+
     init() {
         lightning = Lightning()
     }

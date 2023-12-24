@@ -40,10 +40,8 @@ struct StarsView: View {
                 }
                 context.addFilter(.blur(radius: 0.3))
                 
-                
-                
                 for (index, star) in starField.stars.enumerated() {
-                    let path = Path(ellipseIn: CGRect(x: star.x, y:star.y, width: star.size, height: star.size))
+                    let path = Path(ellipseIn: CGRect(x: star.x, y: star.y, width: star.size, height: star.size))
                     
                     if star.flickerInterval == 0 {
                         // flash

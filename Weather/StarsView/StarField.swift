@@ -27,16 +27,13 @@ class StarField {
         let delta = date.timeIntervalSince1970 - lastUpdate.timeIntervalSince1970
         
         for star in stars {
-                
-                
-                let speedFactor = 1 + star.size / 3 // Speed increases with star size
-                star.x -= delta * speedFactor * 2
+            let speedFactor = 1 + star.size / 3 // Speed increases with star size
+            star.x -= delta * speedFactor * 2
 
-                if star.x < leftEdge {
-                    star.x = rightEdge
-                }
+            if star.x < leftEdge {
+                star.x = rightEdge
             }
+        }
         lastUpdate = date
     }
-    
 }

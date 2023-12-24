@@ -10,17 +10,17 @@ import SwiftUI
 class MeteorShower {
     var meteors = Set<Meteor>()
     var lastUpdate = Date.now
-    
+
     var lastCreationDate = Date.now
     var nextCreationDelay = Double.random(in: 5...10)
-    
+
     func update(date: Date, size: CGSize) {
         let delta = date.timeIntervalSince1970 - lastUpdate.timeIntervalSince1970
 
         if lastCreationDate + nextCreationDelay < .now {
             createMeteor(in: size)
         }
-        
+
         for meteor in meteors {
             if meteor.isMovingRight {
                 meteor.x += delta * meteor.speed
@@ -28,7 +28,7 @@ class MeteorShower {
                 meteor.x -= delta * meteor.speed
             }
             meteor.speed -= delta * 900
-            
+
             if meteor.speed < 0 {
                 meteors.remove(meteor)
             } else if meteor.length < 100 {
@@ -38,7 +38,7 @@ class MeteorShower {
 
         lastUpdate = date
     }
-    
+
     func createMeteor(in size: CGSize) {
         let meteor: Meteor
 

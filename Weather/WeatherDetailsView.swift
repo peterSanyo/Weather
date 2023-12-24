@@ -9,11 +9,10 @@ import SwiftUI
 
 struct WeatherDetailsView: View {
     let tintColor: Color
-    
+
     let residueType: Storm.Contents
     let residueStrength: Double
-    
-    
+
     var body: some View {
         ScrollView {
             VStack(spacing: 0) {
@@ -21,7 +20,7 @@ struct WeatherDetailsView: View {
                     .frame(height: 62)
                     .offset(y: 30) // leaving 2 pixels to look like resting on top of the Rectangle
                     .zIndex(1)
-                
+
                 RoundedRectangle(cornerRadius: 25)
                     .fill(tintColor.opacity(0.25))
                     .frame(height: 800)

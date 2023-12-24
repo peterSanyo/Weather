@@ -75,23 +75,21 @@ struct ContentView: View {
         ZStack {
             StarsView()
                 .opacity(starOpacity)
-//
-//            CloudsView(
-//                thickness: cloudThickness,
-//                topTint: cloudTopStops.interpolated(amount: time),
-//                bottomTint: cloudBottomStops.interpolated(amount:time)
-//            )
+
+            CloudsView(
+                thickness: cloudThickness,
+                topTint: cloudTopStops.interpolated(amount: time),
+                bottomTint: cloudBottomStops.interpolated(amount: time)
+            )
             
-//            
-//            if stormType != .none {
-//                StormView(type: stormType, direction: .degrees(rainAngle), strength: Int(rainIntensity))
-//            }
-//            
-//            WeatherDetailsView(tintColor: backgroundTopStops.interpolated(amount: time), residueType: stormType, residueStrength: rainIntensity)
+            if stormType != .none {
+                StormView(type: stormType, direction: .degrees(rainAngle), strength: Int(rainIntensity))
+            }
             
-//            LightningView()
-//            SunView(progress: time)
+            WeatherDetailsView(tintColor: backgroundTopStops.interpolated(amount: time), residueType: stormType, residueStrength: rainIntensity)
             
+            LightningView()
+            SunView(progress: time)
         }
         .preferredColorScheme(.dark)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -105,13 +103,11 @@ struct ContentView: View {
     // MARK: - Sky Gradient
     
     var skyGradient: some View {
-        LinearGradient( colors: [
+        LinearGradient(colors: [
             backgroundTopStops.interpolated(amount: time),
             backgroundBottomStops.interpolated(amount: time)
         ], startPoint: .top, endPoint: .bottom)
     }
-    
-    
     
     // MARK: - Debug Interface
     
@@ -173,4 +169,3 @@ struct ContentView: View {
 #Preview {
     ContentView()
 }
-
