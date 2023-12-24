@@ -20,7 +20,9 @@ struct StarsView: View {
                 
                 let rightColors = [.clear, Color(red: 0.8, green: 1, blue: 1), .white]
                 let leftColors = Array(rightColors.reversed())
-
+                
+                
+                // Render meteors
                 for meteor in meteorShower.meteors {
                     var contextCopy = context
 
@@ -40,6 +42,7 @@ struct StarsView: View {
                 }
                 context.addFilter(.blur(radius: 0.3))
                 
+                // Render stars
                 for (index, star) in starField.stars.enumerated() {
                     let path = Path(ellipseIn: CGRect(x: star.x, y: star.y, width: star.size, height: star.size))
                     

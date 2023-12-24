@@ -146,7 +146,6 @@
 				4589EFBF2B325A5A00D9FE4D /* Star.swift */,
 				4589EFE22B35D2EC00D9FE4D /* MeteorShower.swift */,
 				4589EFE02B35CCD700D9FE4D /* Meteor.swift */,
-				4589EFDF2B35CCC400D9FE4D /* Meteor */,
 				4589EFCC2B342B4700D9FE4D /* Residue */,
 			);
 			path = StarsView;
@@ -188,13 +187,6 @@
 				4589EFDD2B35A4F800D9FE4D /* SunView.swift */,
 			);
 			path = Sun;
-			sourceTree = "<group>";
-		};
-		4589EFDF2B35CCC400D9FE4D /* Meteor */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Meteor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
