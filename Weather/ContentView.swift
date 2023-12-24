@@ -73,8 +73,8 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
-//            StarsView()
-//                .opacity(starOpacity)
+            StarsView()
+                .opacity(starOpacity)
 //
 //            CloudsView(
 //                thickness: cloudThickness,
@@ -90,7 +90,7 @@ struct ContentView: View {
 //            WeatherDetailsView(tintColor: backgroundTopStops.interpolated(amount: time), residueType: stormType, residueStrength: rainIntensity)
             
 //            LightningView()
-            SunView(progress: time)
+//            SunView(progress: time)
             
         }
         .preferredColorScheme(.dark)

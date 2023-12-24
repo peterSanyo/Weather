@@ -13,18 +13,18 @@ class Meteor: Hashable {
     var y: Double
     var length = 0.0
     var isMovingRight: Bool
-    var speed = 120.0
-    
+    var speed = 1200.0
+
     init(x: Double, y: Double, isMovingRight: Bool) {
         self.x = x
         self.y = y
         self.isMovingRight = isMovingRight
     }
-    
+
     static func ==(lhs: Meteor, rhs: Meteor) -> Bool {
         lhs.id == rhs.id
     }
-    
+
     func hash(into hasher: inout Hasher) {
         hasher.combine(id)
     }

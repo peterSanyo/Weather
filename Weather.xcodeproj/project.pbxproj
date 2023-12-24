@@ -144,6 +144,8 @@
 				4589EFC32B325A6E00D9FE4D /* StarsView.swift */,
 				4589EFC12B325A6100D9FE4D /* StarField.swift */,
 				4589EFBF2B325A5A00D9FE4D /* Star.swift */,
+				4589EFE22B35D2EC00D9FE4D /* MeteorShower.swift */,
+				4589EFE02B35CCD700D9FE4D /* Meteor.swift */,
 				4589EFDF2B35CCC400D9FE4D /* Meteor */,
 				4589EFCC2B342B4700D9FE4D /* Residue */,
 			);
@@ -191,8 +193,6 @@
 		4589EFDF2B35CCC400D9FE4D /* Meteor */ = {
 			isa = PBXGroup;
 			children = (
-				4589EFE22B35D2EC00D9FE4D /* MeteorShower.swift */,
-				4589EFE02B35CCD700D9FE4D /* Meteor.swift */,
 			);
 			path = Meteor;
 			sourceTree = "<group>";

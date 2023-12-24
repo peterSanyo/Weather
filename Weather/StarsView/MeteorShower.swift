@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class MeterShower {
+class MeteorShower {
     var meteors = Set<Meteor>()
     var lastUpdate = Date.now
     
@@ -20,9 +20,10 @@ class MeterShower {
         if lastCreationDate + nextCreationDelay < .now {
             createMeteor(in: size)
         }
+        
         for meteor in meteors {
             if meteor.isMovingRight {
-                meteor.x -= delta * meteor.speed
+                meteor.x += delta * meteor.speed
             } else {
                 meteor.x -= delta * meteor.speed
             }
@@ -34,7 +35,7 @@ class MeterShower {
                 meteor.length += delta * 300
             }
         }
-        
+
         lastUpdate = date
     }
     
