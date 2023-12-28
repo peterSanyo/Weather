@@ -21,7 +21,6 @@ struct StarsView: View {
                 let rightColors = [.clear, Color(red: 0.8, green: 1, blue: 1), .white]
                 let leftColors = Array(rightColors.reversed())
                 
-                
                 // Render meteors
                 for meteor in meteorShower.meteors {
                     var contextCopy = context

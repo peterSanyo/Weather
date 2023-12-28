@@ -4,7 +4,6 @@
 //
 //  Created by Péter Sanyó on 22.12.23.
 //
-
 import SwiftUI
 
 class MeteorShower {
